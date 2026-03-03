@@ -18,6 +18,7 @@ const travelOptions = {
 };
 
 /* START */
+/* START */
 function start(){
  n1 = document.getElementById("name1").value.trim();
  n2 = document.getElementById("name2").value.trim();
@@ -35,8 +36,7 @@ function start(){
   `Joile mein aapdu new couple name aapyu mein 😎 
    <span class="forever">Forever</span> <span class="emoji">💞</span>`;
 
- // Fixed typeWriter call with proper text
- typeWriter(`Welcome ${n1} ❤️ ${n2} !`, "#introHash", 90);
+ typeWriter("#𝓝𝓮𝓲𝓷𝓪", "#introHash", 90);
  animate("💞");
 
  setTimeout(()=>{
@@ -287,3 +287,4 @@ function typeWriter(text,selector,speed){
   if(idx>=text.length) clearInterval(timer);
  },speed);
 }
+
