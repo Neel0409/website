@@ -35,7 +35,8 @@ function start(){
   `Joile mein aapdu new couple name aapyu mein 😎 
    <span class="forever">Forever</span> <span class="emoji">💞</span>`;
 
- typeWriter("#𝓝𝓮𝓲𝓷𝓪", "#introHash", 90);
+ // Fixed typeWriter call with proper text
+ typeWriter(`Welcome ${n1} ❤️ ${n2} !`, "#introHash", 90);
  animate("💞");
 
  setTimeout(()=>{
@@ -43,20 +44,17 @@ function start(){
   document.getElementById("day").classList.remove("hidden");
   i = 0;
   load();
- },12000);
+ },6000);
 }
 
 /* LOAD DAY */
 function load(){
-
  let d = days[i];
-
  document.body.className = d.b;
  document.getElementById("title").innerText = d.t;
  document.getElementById("progress").style.width = ((i+1)/days.length*100) + "%";
  document.getElementById("options").innerHTML = "";
  document.getElementById("question").innerHTML = "";
-
 
 /* ROSE */
  if(d.b === "rose"){
@@ -167,13 +165,8 @@ Always Yours 💞`,
  }
 
 /* ANNIVERSARY */
-if(d.b === "anniversary"){
-
-/* ANNIVERSARY */
-if(d.b === "anniversary"){
-
- 
- typeWriter(
+ if(d.b === "anniversary"){
+  typeWriter(
 `7 varsh no samay kyare vityo khabar j na padi...
 
 Hasya, masti, jhaghdya, ane pyaar pn bauj karyo ❤️  
@@ -198,11 +191,11 @@ Thank you for being my everything.
 Here is to our forever! 🥂✨  
 
 I love you jaan ❤️`,
-"#question",
-45
-);animate("✨");
+    "#question",
+    45
+  );
+  animate("✨");
 
-  // 35 sec baad extra message
   setTimeout(()=>{
     let msg = document.createElement("p");
     msg.innerHTML = `
@@ -215,12 +208,12 @@ I love you jaan ❤️`,
     animate("💖");
   },35000);
 
-  // 55 sec baad final page
   setTimeout(()=>{
     end();
   },55000);
 
   return;
+ }
 }
 
 /* OPTIONS */
@@ -266,35 +259,20 @@ function showPopup(t){
 
 /* EMOJI CONTINUOUS BACKGROUND */
 let emojiInterval = null;
-
 function animate(e){
  const bg = document.getElementById("bg");
  if(!bg) return;
-
- // Purana interval band karo (warna speed double hoti jayegi)
  if(emojiInterval) clearInterval(emojiInterval);
-
- // Background clear ek hi baar kare
  bg.innerHTML = "";
-
- // Continuous emoji create honge
  emojiInterval = setInterval(()=>{
-
    let s = document.createElement("div");
    s.className = "float";
    s.innerText = e;
-
    s.style.left = Math.random()*100 + "vw";
    s.style.animationDuration = (Math.random()*3+3) + "s";
-
    bg.appendChild(s);
-
-   // 6 sec baad remove ho jaye
-   setTimeout(()=>{
-     s.remove();
-   },6000);
-
- },500); // har 0.5 sec me naya emoji
+   setTimeout(()=>{ s.remove(); },6000);
+ },500);
 }
 
 /* TYPEWRITER */
@@ -309,7 +287,3 @@ function typeWriter(text,selector,speed){
   if(idx>=text.length) clearInterval(timer);
  },speed);
 }
-
-
-
-
