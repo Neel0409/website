@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+ --primary:#ff4d6d;
+ --secondary:#ff758f;
+ --text:#590d22;
+ --choco:#6b3e26;
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+
+body{
+ font-family:'Poppins',sans-serif;
+ min-height:100dvh; /* Mobile perfect height */
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ overflow:hidden;
+ transition:background 1s ease;
+}
+
+/* BACKGROUNDS */
+body.intro{background:linear-gradient(120deg,#ffdde1,#ee9ca7)}
+body.rose{background:linear-gradient(120deg,#ff9a9e,#fecfef)}
+body.propose{background:linear-gradient(120deg,#fbc2eb,#a6c1ee)}
+body.chocolate{background:linear-gradient(120deg,#d1913c,#ffd194)}
+body.promise{background:linear-gradient(120deg,#cfd9df,#e2ebf0)}
+body.hug{background:linear-gradient(120deg,#fbc8d4,#9795f0)}
+body.kiss{background:linear-gradient(120deg,#ff758c,#ff7eb3)}
+body.anniversary{background:linear-gradient(120deg,#fad0c4,#ffd1ff)}
+
+/* MAIN CONTAINER */
+.container{
+ background:rgba(255,255,255,0.95);
+ padding:2rem;
+ width:90%;
+ max-width:420px;
+ text-align:center;
+ border-radius:22px;
+ box-shadow:0 10px 30px rgba(0,0,0,0.15);
+ animation:fade 0.6s ease;
+ z-index:10;
+}
+
+/* Hide */
+.hidden{display:none}
+
+h1,h2{
+ font-family:'Pacifico',cursive;
+ color:var(--primary);
+ margin-bottom:10px;
+}
+
+/* Chocolate Special */
+body.chocolate #question{
+ font-family:'Great Vibes',cursive;
+ font-size:1.5rem;
+ color:var(--choco);
+ animation:chocoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes chocoGlow{
+ from{ text-shadow:0 0 5px #6b3e26; }
+ to{ text-shadow:0 0 15px #8b4513,0 0 30px #d2691e; }
+}
+
+.choco-note{
+ margin-top:10px;
+ font-size:1rem;
+ font-weight:600;
+ color:#5a2e15;
+}
+
+/* Inputs */
+input{
+ width:100%;
+ padding:12px;
+ margin:8px 0;
+ border-radius:12px;
+ border:2px solid var(--secondary);
+}
+
+/* Buttons */
+.btn{
+ width:100%;
+ padding:12px;
+ border:none;
+ border-radius:30px;
+ background:var(--primary);
+ color:white;
+ font-size:1.1rem;
+ cursor:pointer;
+ margin-top:10px;
+ transition:0.3s;
+}
+
+.btn:hover{
+ background:var(--secondary);
+ transform:scale(1.05);
+}
+
+/* Progress */
+.progress-bar{
+ height:8px;
+ background:#ffe5ec;
+ border-radius:5px;
+ overflow:hidden;
+ margin-bottom:15px;
+}
+
+#progress{
+ height:100%;
+ width:0%;
+ background:var(--primary);
+ transition:0.5s;
+}
+
+/* Floating Background */
+#bg{
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ z-index:-1;
+}
+
+/* Smooth Floating Emoji */
+.float{
+ position:fixed;
+ top:100%;
+ font-size:24px;
+ animation:floatUp linear forwards;
+ pointer-events:none;
+}
+
+@keyframes floatUp{
+ from{
+  transform:translateY(0);
+  opacity:1;
+ }
+ to{
+  transform:translateY(-110vh);
+  opacity:0;
+ }
+}
+
+/* Popup */
+#popup{
+ position:fixed;
+ top:20px;
+ background:white;
+ padding:12px 25px;
+ border-radius:40px;
+ color:var(--primary);
+ font-weight:bold;
+ transform:translateY(-100px);
+ transition:0.5s;
+ z-index:100;
+}
+
+#popup.show{
+ transform:translateY(0);
+}
+
+/* Intro Effects */
+.glow{
+ animation:glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+ from{ text-shadow:0 0 5px #ff4d6d; }
+ to{ text-shadow:0 0 20px #ff2f68,0 0 40px #ff758f; }
+}
+
+.forever{
+ color:#ff2f68;
+ font-weight:bold;
+}
+
+#question b{
+ font-weight:900;
+ font-size:28px;
+ color:#6a371c;
+}
+
+.emoji{
+ display:inline-block;
+ animation:floatEmoji 2s ease-in-out infinite;
+}
+
+@keyframes floatEmoji{
+ 0%{transform:translateY(0)}
+ 50%{transform:translateY(-8px)}
+ 100%{transform:translateY(0)}
+}
+
+#introTitle{
+ font-family:'Great Vibes',cursive;
+ font-size:2.4rem;
+}
+
+#introHash{
+ font-family:'Pacifico',cursive;
+ font-size:1.3rem;
+ color:#ff4d6d;
+ margin-top:10px;
+}
+
+/* Fade Animation */
+@keyframes fade{
+ from{opacity:0;transform:scale(0.9)}
+ to{opacity:1;transform:scale(1)}
+}

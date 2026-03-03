@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neina – When Love Found Us 💞</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="intro">
+
+<div id="bg"></div>
+<div id="popup">Try again my love 💕</div>
+
+<!-- NAME PAGE -->
+<div id="welcome" class="container">
+ <h1>Love Journey 💞</h1>
+ <input id="name1" placeholder="Your Name">
+ <input id="name2" placeholder="Partner Name">
+ <button class="btn" onclick="start()">Continue ❤️</button>
+</div>
+
+<!-- INTRO PAGE -->
+<div id="introPage" class="container hidden">
+ <div id="introTitle" class="glow"></div>
+ <div id="introHash"></div>
+</div>
+
+<!-- DAY PAGE -->
+<div id="day" class="container hidden">
+ <div class="progress-bar"><div id="progress"></div></div>
+ <h2 id="title"></h2>
+ <p id="question"></p>
+ <div id="options"></div>
+</div>
+
+<!-- FINAL PAGE -->
+<div id="final" class="container hidden">
+ <h1>Happy 7th Anniversary 🎉</h1>
+ <p id="finalText"></p>
+ <button class="btn" onclick="location.reload()">Restart 🔄</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
