@@ -18,7 +18,6 @@ const travelOptions = {
 };
 
 /* START */
-/* START */
 function start(){
  n1 = document.getElementById("name1").value.trim();
  n2 = document.getElementById("name2").value.trim();
@@ -36,7 +35,8 @@ function start(){
   `Joile mein aapdu new couple name aapyu mein 😎 
    <span class="forever">Forever</span> <span class="emoji">💞</span>`;
 
- typeWriter("#𝓝𝓮𝓲𝓷𝓪", "#introHash", 90);
+ // Fixed: Keep same #𝓝𝓮𝓲𝓷𝓪 selector
+ typeWriter(`#𝓝𝓮𝓲𝓷𝓪 ❤️ #introHash`, "#𝓝𝓮𝓲𝓷𝓪", 90);
  animate("💞");
 
  setTimeout(()=>{
@@ -220,8 +220,8 @@ I love you jaan ❤️`,
 function createOptions(d){
  d.o.forEach((x,j)=>{
   let b=document.createElement("button");
-  b.className="btn";
-  b.innerText=x;
+  b.className = "btn";
+  b.innerText = x;
   b.onclick=()=>check(j===d.c);
   document.getElementById("options").appendChild(b);
  });
@@ -279,12 +279,11 @@ function animate(e){
 function typeWriter(text,selector,speed){
  let el=document.querySelector(selector);
  if(!el) return;
- el.innerHTML="";
  let idx=0;
- let timer=setInterval(()=>{
-  el.innerHTML+=text.charAt(idx);
-  idx++;
-  if(idx>=text.length) clearInterval(timer);
- },speed);
+ el.innerHTML = "";
+ let timer = setInterval(()=>{
+   el.innerHTML += text.charAt(idx);
+   idx++;
+   if(idx >= text.length) clearInterval(timer);
+ }, speed);
 }
-
