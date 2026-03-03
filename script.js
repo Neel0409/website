@@ -172,7 +172,8 @@ if(d.b === "anniversary"){
 /* ANNIVERSARY */
 if(d.b === "anniversary"){
 
-  typeWriter(
+ 
+ typeWriter(
 `7 varsh no samay kyare vityo khabar j na padi...
 
 Hasya, masti, jhaghdya, ane pyaar pn bauj karyo ❤️  
@@ -197,11 +198,9 @@ Thank you for being my everything.
 Here is to our forever! 🥂✨  
 
 I love you jaan ❤️`,
-    "#question",
-    45
-  );
-
-  animate("✨");
+"#question",
+45
+);animate("✨");
 
   // 35 sec baad extra message
   setTimeout(()=>{
@@ -310,6 +309,7 @@ function typeWriter(text,selector,speed){
   if(idx>=text.length) clearInterval(timer);
  },speed);
 }
+
 
 
 
