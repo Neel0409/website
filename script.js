@@ -169,7 +169,39 @@ Always Yours 💞`,
 /* ANNIVERSARY */
 if(d.b === "anniversary"){
 
- typeWriter( 7 varsh no samay kyare vityo khabar j na padi... Hasya, masti, jhaghdya, ane pyaar pn bauj karyo & aagad pn krishu aapde hji aapdi family ne pn baujj happy feel karavana che k haa loko ne aemni rite relation ma rakhya pn ae loko ae aemnu best kryu che and aagad pn krse kyare ae loko ne k aapdne afsos nai thay and hu bauu khush chu k papa pn mne joine gya and i hope aemne pn tari chinta nahi hoy hu tne kyare pn aemni kami feel nai thava dau jaaan promise . 7 varsh, 84 mahina, 2555 divas... Ane har divase taro prem vadhto j gayo che. Thank you for being my everything. Here is to our forever! 🥂✨ I love you jaan ❤️, "#question", 45 ); animate("✨"); animate("✨");
+/* ANNIVERSARY */
+if(d.b === "anniversary"){
+
+  typeWriter(
+`7 varsh no samay kyare vityo khabar j na padi...
+
+Hasya, masti, jhaghdya, ane pyaar pn bauj karyo ❤️  
+Aagad pn krishu aapde, haji aapdi family ne bau happy feel karavana che.
+
+Badha e aemnu best karyu che,  
+ane aagad pn karse — kyarey aapdne afsos nai thay.
+
+Hu bau khush chu ke papa mane joine gaya 🤍  
+Ane I hope aemne pn tari chinta nahi hoy.
+
+Hu tane promise karu chu —  
+kyarey pan evi kami feel nai thava dau jaan ❤️
+
+7 varsh,  
+84 mahina,  
+2555 divas...
+
+Ane har divase taro prem vadhto j gayo che 💖
+
+Thank you for being my everything.  
+Here is to our forever! 🥂✨  
+
+I love you jaan ❤️`,
+    "#question",
+    45
+  );
+
+  animate("✨");
 
   // 35 sec baad extra message
   setTimeout(()=>{
@@ -190,7 +222,6 @@ if(d.b === "anniversary"){
   },55000);
 
   return;
-}
 }
 
 /* OPTIONS */
@@ -279,5 +310,6 @@ function typeWriter(text,selector,speed){
   if(idx>=text.length) clearInterval(timer);
  },speed);
 }
+
 
 
