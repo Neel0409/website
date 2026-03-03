@@ -15,11 +15,12 @@
 
 body{
  font-family:'Poppins',sans-serif;
- min-height:100dvh; /* Mobile perfect height */
+ min-height:100dvh;
  display:flex;
  justify-content:center;
  align-items:center;
- overflow:hidden;
+ overflow-x:hidden;
+ overflow-y:auto;
  transition:background 1s ease;
 }
 
@@ -44,6 +45,9 @@ body.anniversary{background:linear-gradient(120deg,#fad0c4,#ffd1ff)}
  box-shadow:0 10px 30px rgba(0,0,0,0.15);
  animation:fade 0.6s ease;
  z-index:10;
+
+ max-height:95dvh;
+ overflow-y:auto;
 }
 
 /* Hide */
@@ -53,6 +57,16 @@ h1,h2{
  font-family:'Pacifico',cursive;
  color:var(--primary);
  margin-bottom:10px;
+}
+
+/* Question Text */
+#question{
+ font-size:16px;
+ line-height:1.7;
+ white-space:pre-line;
+ word-wrap:break-word;
+ margin-top:10px;
+ padding:5px;
 }
 
 /* Chocolate Special */
@@ -82,6 +96,7 @@ input{
  margin:8px 0;
  border-radius:12px;
  border:2px solid var(--secondary);
+ font-size:16px;
 }
 
 /* Buttons */
@@ -117,6 +132,13 @@ input{
  width:0%;
  background:var(--primary);
  transition:0.5s;
+}
+
+/* DAY PAGE FIX */
+#day{
+ max-height:95dvh;
+ overflow-y:auto;
+ padding-bottom:20px;
 }
 
 /* Floating Background */
@@ -182,7 +204,7 @@ input{
 
 #question b{
  font-weight:900;
- font-size:28px;
+ font-size:22px;
  color:#6a371c;
 }
 
@@ -199,7 +221,7 @@ input{
 
 #introTitle{
  font-family:'Great Vibes',cursive;
- font-size:2.4rem;
+ font-size:2.2rem;
 }
 
 #introHash{
@@ -213,4 +235,15 @@ input{
 @keyframes fade{
  from{opacity:0;transform:scale(0.9)}
  to{opacity:1;transform:scale(1)}
+}
+
+/* MOBILE EXTRA TWEAK */
+@media(max-width:480px){
+ .container{
+  padding:1.5rem;
+ }
+
+ #question{
+  font-size:15px;
+ }
 }
